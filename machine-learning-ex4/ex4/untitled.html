@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+<script>
+  var socket = io('http://185.18.168.151:19008/foun_sio');
+  socket.on('connect', function(){
+  	console.log("I m so goood");
+  });
+  socket.on('event', function(data){
+  	console.log("here we are");
+  	console.log(data);
+  	console.log("I m so bad");
+  });
+  socket.on('disconnect', function(){
+  	console.log("I m so very bad")
+  });
+</script>
+</body>
+</html>
+
+
+
